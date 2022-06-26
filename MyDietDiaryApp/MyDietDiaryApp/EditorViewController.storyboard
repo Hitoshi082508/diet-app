@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8kG-P4-n3d">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Editor View Controller-->
+        <scene sceneID="PSJ-Bt-1Rl">
+            <objects>
+                <viewController id="8kG-P4-n3d" customClass="EditorViewController" customModule="MyDietDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="38p-KQ-DUv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcF-Lt-L0a">
+                                <rect key="frame" x="40" y="84" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="avn-LH-aho">
+                                <rect key="frame" x="40" y="125" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="体重" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdl-aC-ftE">
+                                <rect key="frame" x="40" y="179" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OJm-vL-cWH">
+                                <rect key="frame" x="40" y="220" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZoA-NT-Uud"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tdl-aC-ftE" firstAttribute="top" secondItem="avn-LH-aho" secondAttribute="bottom" constant="20" id="0DA-YM-HGC"/>
+                            <constraint firstItem="avn-LH-aho" firstAttribute="top" secondItem="gcF-Lt-L0a" secondAttribute="bottom" constant="20" id="95E-4a-Ddj"/>
+                            <constraint firstItem="gcF-Lt-L0a" firstAttribute="leading" secondItem="ZoA-NT-Uud" secondAttribute="leading" constant="40" id="K0J-iq-03D"/>
+                            <constraint firstItem="ZoA-NT-Uud" firstAttribute="trailing" secondItem="OJm-vL-cWH" secondAttribute="trailing" constant="40" id="UDx-Q4-Odj"/>
+                            <constraint firstItem="OJm-vL-cWH" firstAttribute="top" secondItem="Tdl-aC-ftE" secondAttribute="bottom" constant="20" id="af7-FH-Cc9"/>
+                            <constraint firstItem="OJm-vL-cWH" firstAttribute="top" secondItem="Tdl-aC-ftE" secondAttribute="bottom" constant="20" id="bz0-if-Pb2"/>
+                            <constraint firstItem="avn-LH-aho" firstAttribute="leading" secondItem="gcF-Lt-L0a" secondAttribute="leading" id="mN9-8X-NvO"/>
+                            <constraint firstItem="gcF-Lt-L0a" firstAttribute="top" secondItem="ZoA-NT-Uud" secondAttribute="top" constant="40" id="nhS-8M-2kU"/>
+                            <constraint firstItem="ZoA-NT-Uud" firstAttribute="trailing" secondItem="avn-LH-aho" secondAttribute="trailing" constant="40" id="swk-qw-gn7"/>
+                            <constraint firstItem="Tdl-aC-ftE" firstAttribute="leading" secondItem="ZoA-NT-Uud" secondAttribute="leading" constant="40" id="tHu-OY-lWa"/>
+                            <constraint firstItem="OJm-vL-cWH" firstAttribute="leading" secondItem="ZoA-NT-Uud" secondAttribute="leading" constant="40" id="yKG-ok-wfF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="phy-4J-33q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-218" y="100"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

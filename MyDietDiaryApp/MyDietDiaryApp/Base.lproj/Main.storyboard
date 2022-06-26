@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mh8-Z8-d4d">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="73L-He-fSa">
+            <objects>
+                <viewController id="6sn-CJ-rDF" customClass="GraphViewController" customModule="MyDietDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gZp-5p-4Q2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mRX-tf-79K"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="Ftb-bM-cGl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3BD-e8-hbc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="584" y="752"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="ae3-7P-KBl">
+            <objects>
+                <viewController id="TEv-Ml-6iq" customClass="CalenderViewController" customModule="MyDietDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gD4-Z9-dUy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAx-6f-kIO" customClass="FSCalendar">
+                                <rect key="frame" x="20" y="194" width="374" height="299"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1K-hh-x3F">
+                                <rect key="frame" x="353" y="749" width="41" height="44"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addButton:" destination="TEv-Ml-6iq" eventType="touchUpInside" id="Ksb-Hl-v7R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CQD-K0-LhM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VAx-6f-kIO" firstAttribute="top" secondItem="CQD-K0-LhM" secondAttribute="top" constant="150" id="3rE-Yb-ATl"/>
+                            <constraint firstItem="CQD-K0-LhM" firstAttribute="trailing" secondItem="y1K-hh-x3F" secondAttribute="trailing" constant="20" id="9OM-WE-wWl"/>
+                            <constraint firstItem="VAx-6f-kIO" firstAttribute="leading" secondItem="CQD-K0-LhM" secondAttribute="leading" constant="20" id="KGQ-F8-qvD"/>
+                            <constraint firstItem="CQD-K0-LhM" firstAttribute="trailing" secondItem="VAx-6f-kIO" secondAttribute="trailing" constant="20" id="Mhs-E5-xBW"/>
+                            <constraint firstItem="CQD-K0-LhM" firstAttribute="bottom" secondItem="y1K-hh-x3F" secondAttribute="bottom" constant="20" id="mig-Dx-W95"/>
+                            <constraint firstItem="CQD-K0-LhM" firstAttribute="bottom" secondItem="VAx-6f-kIO" secondAttribute="bottom" constant="320" id="qX5-SU-KDr"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="iLj-xl-rgb"/>
+                    <connections>
+                        <outlet property="addButton" destination="y1K-hh-x3F" id="Szn-Lc-Mwr"/>
+                        <outlet property="calendarView" destination="VAx-6f-kIO" id="nqf-l5-kC2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rRZ-jf-9Rj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="582.60869565217399" y="144.64285714285714"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="dDN-Z7-oQF">
+            <objects>
+                <tabBarController id="Mh8-Z8-d4d" customClass="MainTabBarController" customModule="MyDietDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MNm-VC-IKF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="TEv-Ml-6iq" kind="relationship" relationship="viewControllers" id="ru5-Ps-taf"/>
+                        <segue destination="6sn-CJ-rDF" kind="relationship" relationship="viewControllers" id="f0L-t3-6VC"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lYq-Ij-ci7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-309" y="450"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
